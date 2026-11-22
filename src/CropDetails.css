@@ -1,0 +1,256 @@
+
+.crop-details-page {
+  min-height: 100vh;
+  background: #f7faf5;
+  color: #263b2b;
+}
+
+.crop-details-navbar {
+  height: 75px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+}
+
+.crop-details-navbar h2 {
+  font-size: 23px;
+  color: #26783b;
+  font-family: 'Poppins', sans-serif;
+}
+
+.crop-details-navbar button,
+.crop-back-button {
+  padding: 12px 19px;
+  border: none;
+  border-radius: 6px;
+  background: #287b3b;
+  color: white;
+  cursor: pointer;
+}
+
+.crop-details-hero {
+  height: 390px;
+  position: relative;
+  overflow: hidden;
+}
+
+.crop-details-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.crop-details-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 65px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(
+    90deg,
+    rgba(10, 35, 18, .88),
+    rgba(10, 35, 18, .15)
+  );
+  color: white;
+}
+
+.crop-details-overlay span,
+.crop-label {
+  color: #83aa62;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.crop-details-overlay span {
+  color: #c9e5ad;
+}
+
+.crop-details-overlay h1 {
+  font-size: clamp(38px, 5vw, 58px);
+  margin: 15px 0;
+}
+
+.crop-details-overlay p {
+  max-width: 650px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.crop-details-container {
+  width: 84%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 65px 0;
+}
+
+.crop-about h2,
+.cultivation-section h2 {
+  color: #245e35;
+  font-size: 30px;
+  margin: 12px 0;
+}
+
+.crop-about p {
+  color: #718074;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.crop-facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 40px 0 65px;
+}
+
+.crop-fact-card {
+  background: white;
+  padding: 24px;
+  border-radius: 9px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, .05);
+  border-bottom: 3px solid #79a85d;
+}
+
+.crop-fact-card>span {
+  font-size: 25px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.crop-fact-card small {
+  color: #7a897c;
+  font-size: 11px;
+}
+
+.crop-fact-card h3 {
+  color: #285e36;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 9px 0 0;
+}
+
+.cultivation-section {
+  margin-top: 45px;
+}
+
+.cultivation-list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cultivation-step {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  background: white;
+  padding: 17px 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, .04);
+}
+
+.cultivation-step>span {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #e8f2df;
+  color: #328343;
+  font-weight: 700;
+}
+
+.cultivation-step p {
+  color: #536658;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.crop-tip {
+  margin: 50px 0 30px;
+  padding: 25px;
+  background: #fff8e9;
+  border-left: 4px solid #9aaf52;
+  border-radius: 5px;
+}
+
+.crop-tip h3 {
+  color: #526c35;
+}
+
+.crop-tip p {
+  color: #718074;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.crop-back-button {
+  margin-top: 15px;
+}
+
+.crop-details-footer {
+  background: #153d23;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+.crop-details-footer p {
+  color: #c7d9c9;
+  font-size: 12px;
+}
+
+.crop-not-found {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.crop-not-found button {
+  padding: 12px 20px;
+  background: #287b3b;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 750px) {
+  .crop-facts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .crop-details-navbar {
+    padding: 0 5%;
+  }
+
+  .crop-details-hero {
+    height: 310px;
+  }
+
+  .crop-details-overlay {
+    padding: 35px 7%;
+  }
+
+  .crop-details-container {
+    width: 90%;
+    padding: 45px 0;
+  }
+
+  .crop-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .crop-about h2,
+  .cultivation-section h2 {
+    font-size: 25px;
+  }
+}

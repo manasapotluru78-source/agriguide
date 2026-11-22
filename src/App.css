@@ -1,0 +1,603 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #263b2b;
+}
+
+.navbar {
+  height: 76px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.logo {
+  color: #247a39;
+  font-size: 25px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #354b38;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #299447;
+}
+
+.menu-toggle {
+  display: none;
+  border: none;
+  background: none;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+.hero {
+  min-height: 590px;
+  display: flex;
+  align-items: center;
+  padding: 70px 10%;
+  background:
+    linear-gradient(90deg, rgba(8,35,17,0.86), rgba(8,35,17,0.25)),
+    url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1800')
+    center/cover no-repeat;
+  color: white;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.tagline {
+  color: #b7ed9c;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 5vw, 65px);
+  line-height: 1.2;
+  margin: 20px 0;
+}
+
+.hero h1 span {
+  color: #9bdf77;
+  display: block;
+}
+
+.hero p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #e6f0e5;
+  max-width: 530px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 25px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: 0.3s;
+}
+
+.primary-btn {
+  background: #328c43;
+  color: white;
+}
+
+.primary-btn:hover {
+  background: #226b32;
+  transform: translateY(-3px);
+}
+
+.outline-btn {
+  border: 1px solid white;
+  color: white;
+}
+
+.outline-btn:hover {
+  background: white;
+  color: #267a39;
+}
+
+.section {
+  padding: 85px 8%;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 45px;
+}
+
+.section-heading span {
+  color: #39924b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.section-heading h2 {
+  font-size: 34px;
+  margin: 12px 0;
+}
+
+.section-heading p {
+  color: #718074;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.feature-card {
+  padding: 32px 25px;
+  text-align: center;
+  border-radius: 12px;
+  background: #f5f9f3;
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.feature-icon {
+  font-size: 42px;
+}
+
+.feature-card h3 {
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  color: #718074;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.crops-section {
+  background: #f7faf5;
+}
+
+.search-box {
+  max-width: 420px;
+  margin: 0 auto 35px;
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #dce6da;
+  padding: 0 15px;
+  border-radius: 8px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 14px 0;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+.crop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.crop-card {
+  overflow: hidden;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+  transition: 0.3s;
+}
+
+.crop-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+.crop-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.crop-info {
+  padding: 18px 20px;
+}
+
+.crop-info h3 {
+  color: #28783a;
+  margin-top: 0;
+}
+
+.crop-info p {
+  color: #68786a;
+  font-size: 13px;
+  margin: 9px 0;
+}
+
+.crop-info strong {
+  color: #344b37;
+}
+
+.no-results {
+  text-align: center;
+  grid-column: 1 / -1;
+}
+
+.recommend-section {
+  background: white;
+}
+
+.recommend-box {
+  max-width: 550px;
+  margin: auto;
+  background: #f5f9f3;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.recommend-box label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 15px 0 8px;
+}
+
+.recommend-box select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #d4dfd1;
+  border-radius: 7px;
+  background: white;
+  font-family: inherit;
+  outline-color: #328c43;
+}
+
+.recommend-btn {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.recommend-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.recommend-results {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 8px;
+  background: white;
+}
+
+.recommend-results h3 {
+  color: #28783a;
+}
+
+.recommend-results p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.recommend-results small {
+  display: block;
+  margin-top: 15px;
+  color: #718074;
+  line-height: 1.6;
+}
+
+.contact-section {
+  text-align: center;
+  padding: 65px 20px;
+  background: #1f6633;
+  color: white;
+}
+
+.contact-section h2 {
+  font-size: 30px;
+}
+
+.contact-section p {
+  color: #d6e8d6;
+}
+
+.contact-btn {
+  margin-top: 15px;
+  background: white;
+  color: #26783b;
+}
+
+footer {
+  background: #153d23;
+  color: white;
+  text-align: center;
+  padding: 28px 15px;
+}
+
+footer h3 {
+  font-size: 23px;
+}
+
+footer p {
+  color: #c7d9c9;
+  font-size: 12px;
+}
+
+@media (max-width: 850px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .crop-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    height: 68px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    padding: 20px 7%;
+    box-shadow: 0 8px 12px rgba(0,0,0,0.08);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hero {
+    min-height: 520px;
+    padding: 60px 7%;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .section {
+    padding: 60px 6%;
+  }
+
+  .section-heading h2 {
+    font-size: 27px;
+  }
+
+  .feature-grid,
+  .crop-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recommend-box {
+    padding: 23px;
+  }
+
+  .contact-section h2 {
+    font-size: 25px;
+  }
+}
+
+/* SOIL INFORMATION SECTION */
+
+.soil-section {
+  background: #f5f9f3;
+}
+
+.soil-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.soil-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+}
+
+.soil-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.soil-image {
+  height: 210px;
+  position: relative;
+  overflow: hidden;
+}
+
+.soil-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.soil-card:hover .soil-image img {
+  transform: scale(1.07);
+}
+
+.soil-number {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: white;
+  color: #26783b;
+  padding: 7px 12px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.soil-content {
+  padding: 23px;
+}
+
+.soil-content h3 {
+  color: #26783b;
+  font-size: 21px;
+  margin: 0 0 12px;
+}
+
+.soil-content p {
+  color: #718074;
+  font-size: 13px;
+  line-height: 1.8;
+  min-height: 70px;
+}
+
+.soil-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-top: 1px solid #e7eee4;
+  border-bottom: 1px solid #e7eee4;
+  font-size: 12px;
+}
+
+.soil-detail strong,
+.suitable-crops strong {
+  color: #354b38;
+}
+
+.soil-detail span {
+  color: #43854a;
+  font-weight: 600;
+}
+
+.suitable-crops {
+  margin-top: 18px;
+  font-size: 12px;
+}
+
+.crop-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 12px;
+}
+
+.crop-tags span {
+  background: #edf5e9;
+  color: #367642;
+  padding: 7px 10px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* SOIL RESPONSIVE DESIGN */
+
+@media (max-width: 850px) {
+  .soil-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .soil-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .soil-image {
+    height: 230px;
+  }
+}
+.soil-card {
+  cursor: pointer;
+}
+.nav-auth-link,
+.nav-auth-button {
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+}
+
+.nav-auth-link {
+  border: none;
+  background: transparent;
+  color: inherit;
+  padding: 10px;
+}
+
+.nav-auth-button {
+  border: none;
+  border-radius: 7px;
+  padding: 11px 17px;
+  background: #218838;
+  color: white;
+}
+
+.nav-auth-button:hover {
+  background: #176b2b;
+}
